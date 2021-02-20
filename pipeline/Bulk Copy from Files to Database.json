@@ -119,7 +119,8 @@
 		],
 		"parameters": {
 			"SourceContainer": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "adftutorial"
 			}
 		},
 		"annotations": []
