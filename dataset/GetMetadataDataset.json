@@ -1,13 +1,17 @@
 {
-	"name": "Source",
+	"name": "GetMetadataDataset",
 	"properties": {
+		"description": "Connection to your source data store.",
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"directory": {
-				"type": "String"
+			"SourceContainer": {
+				"type": "string"
+			},
+			"SourceDirectory": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -16,17 +20,18 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "@dataset().directory",
+					"value": "@dataset().SourceDirectory",
 					"type": "Expression"
 				},
-				"fileSystem": "adfdemo"
+				"fileSystem": {
+					"value": "@dataset().SourceContainer",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }

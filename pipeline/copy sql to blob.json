@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "copy sql to blob",
 	"properties": {
 		"activities": [
 			{
@@ -208,7 +208,10 @@
 				"outputs": [
 					{
 						"referenceName": "Source",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"directory": "output"
+						}
 					}
 				]
 			}
