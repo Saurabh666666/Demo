@@ -11,11 +11,20 @@
 		"AzureSqlDatabase_connectionString": {
 			"value": ""
 		},
+		"BulkTable_connectionString": {
+			"value": ""
+		},
 		"CosmosDb_connectionString": {
 			"value": ""
 		},
 		"AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://saurabhdemostorage.dfs.core.windows.net"
+		},
+		"AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://demosaurabh.vault.azure.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://demosaurabh.vault.azure.net/"
 		}
 	}
 }
