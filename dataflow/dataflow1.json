@@ -26,7 +26,7 @@
 					"name": "Sort"
 				}
 			],
-			"script": "source(output(\n\t\tOrderDate as string,\n\t\tStockDate as string,\n\t\tOrderNumber as string,\n\t\tProductKey as short,\n\t\tCustomerKey as short,\n\t\tTerritoryKey as short,\n\t\tOrderLineItem as short,\n\t\tOrderQuantity as short\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tdateFormats: ['dd.MM.yyyy']) ~> source\nsource sort(asc(ProductKey, true),\n\tasc(CustomerKey, true)) ~> Sort\nSort sink(allowSchemaDrift: true,\n\tvalidateSchema: true,\n\tdateFormat:'dd/MM/yyyy',\n\ttimestampFormat:'MM/dd/yyyy HH:mm:ss',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\tsaveOrder: 1) ~> sink"
+			"script": "source(output(\n\t\tOrderDate as string,\n\t\tStockDate as string,\n\t\tOrderNumber as string,\n\t\tProductKey as short,\n\t\tCustomerKey as short,\n\t\tTerritoryKey as short,\n\t\tOrderLineItem as short,\n\t\tOrderQuantity as short\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tdateFormats: ['dd.MM.yyyy'],\n\tpartitionBy('hash', 1)) ~> source\nsource sort(asc(ProductKey, true),\n\tasc(CustomerKey, true),\n\tpartitionBy('hash', 1)) ~> Sort\nSort sink(allowSchemaDrift: true,\n\tvalidateSchema: true,\n\tpartitionFileNames:['Load'],\n\tpartitionBy('hash', 1),\n\tdateFormat:'dd/MM/yyyy',\n\ttimestampFormat:'MM/dd/yyyy HH:mm:ss',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\tsaveOrder: 1) ~> sink"
 		}
 	}
 }
