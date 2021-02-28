@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase'"
 		},
+		"AzureSynapseAnalytics_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSynapseAnalytics'"
+		},
 		"BulkTable_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'BulkTable'"
@@ -22,6 +26,10 @@
 		"CosmosDb_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'CosmosDb'"
+		},
+		"newStorage_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'newStorage'"
 		},
 		"AzureDataLakeStorage_properties_typeProperties_url": {
 			"type": "string",
@@ -34,6 +42,10 @@
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://demosaurabh.vault.azure.net/"
+		},
+		"newStorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newstorage6.dfs.core.windows.net"
 		},
 		"containerUri": {
 			"type": "string",
@@ -68,11 +80,17 @@
 					"AzureSqlDatabase_connectionString": {
 						"value": "[parameters('AzureSqlDatabase_connectionString')]"
 					},
+					"AzureSynapseAnalytics_connectionString": {
+						"value": "[parameters('AzureSynapseAnalytics_connectionString')]"
+					},
 					"BulkTable_connectionString": {
 						"value": "[parameters('BulkTable_connectionString')]"
 					},
 					"CosmosDb_connectionString": {
 						"value": "[parameters('CosmosDb_connectionString')]"
+					},
+					"newStorage_accountKey": {
+						"value": "[parameters('newStorage_accountKey')]"
 					},
 					"AzureDataLakeStorage_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage_properties_typeProperties_url')]"
@@ -82,6 +100,9 @@
 					},
 					"AzureKeyVault1_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"newStorage_properties_typeProperties_url": {
+						"value": "[parameters('newStorage_properties_typeProperties_url')]"
 					}
 				}
 			},

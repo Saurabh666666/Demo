@@ -11,10 +11,16 @@
 		"AzureSqlDatabase_connectionString": {
 			"value": ""
 		},
+		"AzureSynapseAnalytics_connectionString": {
+			"value": ""
+		},
 		"BulkTable_connectionString": {
 			"value": ""
 		},
 		"CosmosDb_connectionString": {
+			"value": ""
+		},
+		"newStorage_accountKey": {
 			"value": ""
 		},
 		"AzureDataLakeStorage_properties_typeProperties_url": {
@@ -25,6 +31,9 @@
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://demosaurabh.vault.azure.net/"
+		},
+		"newStorage_properties_typeProperties_url": {
+			"value": "https://newstorage6.dfs.core.windows.net"
 		},
 		"containerUri": {
 			"value": ""
