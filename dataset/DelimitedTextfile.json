@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "incrementall2.txt",
 				"folderPath": "New Output",
 				"fileSystem": "adfdemo"
 			},
