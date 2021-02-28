@@ -24,7 +24,7 @@
 						"referenceName": "table_store_ChangeTracking_version",
 						"type": "DatasetReference"
 					},
-					"firstRowOnly": false
+					"firstRowOnly": true
 				}
 			},
 			{
