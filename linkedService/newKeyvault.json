@@ -1,0 +1,10 @@
+{
+	"name": "newKeyvault",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://new6Keyvault.vault.azure.net/"
+		}
+	}
+}
