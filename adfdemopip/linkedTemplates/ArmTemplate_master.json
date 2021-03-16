@@ -39,10 +39,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'CosmosDb'"
 		},
-		"newStorage_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'newStorage'"
-		},
 		"SqlServer_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer'"
@@ -51,25 +47,33 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
+		"newStorage_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'newStorage'"
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSynapseAnalytics1'"
+		},
 		"AzureDataLakeStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://saurabhdemostorage.dfs.core.windows.net"
-		},
-		"AzureKeyVault_properties_typeProperties_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://demosaurabh.vault.azure.net/"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://demosaurabh.vault.azure.net/"
 		},
+		"newKeyvault_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://new6Keyvault.vault.azure.net/"
+		},
 		"newStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://newstorage6.dfs.core.windows.net"
 		},
-		"newKeyvault_properties_typeProperties_baseUrl": {
+		"Azure1_properties_typeProperties_connectionString_secretName": {
 			"type": "string",
-			"defaultValue": "https://new6Keyvault.vault.azure.net/"
+			"defaultValue": "newsql"
 		},
 		"containerUri": {
 			"type": "string",
@@ -122,29 +126,29 @@
 					"CosmosDb_connectionString": {
 						"value": "[parameters('CosmosDb_connectionString')]"
 					},
-					"newStorage_accountKey": {
-						"value": "[parameters('newStorage_accountKey')]"
-					},
 					"SqlServer_connectionString": {
 						"value": "[parameters('SqlServer_connectionString')]"
 					},
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
 					},
+					"newStorage_accountKey": {
+						"value": "[parameters('newStorage_accountKey')]"
+					},
+					"AzureSynapseAnalytics1_connectionString": {
+						"value": "[parameters('AzureSynapseAnalytics1_connectionString')]"
+					},
 					"AzureDataLakeStorage_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage_properties_typeProperties_url')]"
-					},
-					"AzureKeyVault_properties_typeProperties_baseUrl": {
-						"value": "[parameters('AzureKeyVault_properties_typeProperties_baseUrl')]"
 					},
 					"AzureKeyVault1_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
 					},
-					"newStorage_properties_typeProperties_url": {
-						"value": "[parameters('newStorage_properties_typeProperties_url')]"
-					},
 					"newKeyvault_properties_typeProperties_baseUrl": {
 						"value": "[parameters('newKeyvault_properties_typeProperties_baseUrl')]"
+					},
+					"newStorage_properties_typeProperties_url": {
+						"value": "[parameters('newStorage_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -163,6 +167,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"Azure1_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('Azure1_properties_typeProperties_connectionString_secretName')]"
 					}
 				}
 			},

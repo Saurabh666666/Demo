@@ -29,29 +29,32 @@
 		"CosmosDb_connectionString": {
 			"value": ""
 		},
-		"newStorage_accountKey": {
-			"value": ""
-		},
 		"SqlServer_connectionString": {
 			"value": ""
 		},
 		"SqlServer1_connectionString": {
 			"value": ""
 		},
+		"newStorage_accountKey": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://saurabhdemostorage.dfs.core.windows.net"
-		},
-		"AzureKeyVault_properties_typeProperties_baseUrl": {
-			"value": "https://demosaurabh.vault.azure.net/"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://demosaurabh.vault.azure.net/"
 		},
+		"newKeyvault_properties_typeProperties_baseUrl": {
+			"value": "https://new6Keyvault.vault.azure.net/"
+		},
 		"newStorage_properties_typeProperties_url": {
 			"value": "https://newstorage6.dfs.core.windows.net"
 		},
-		"newKeyvault_properties_typeProperties_baseUrl": {
-			"value": "https://new6Keyvault.vault.azure.net/"
+		"Azure1_properties_typeProperties_connectionString_secretName": {
+			"value": "newsql"
 		},
 		"containerUri": {
 			"value": ""
