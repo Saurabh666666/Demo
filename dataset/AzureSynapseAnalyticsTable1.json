@@ -1,0 +1,24 @@
+{
+	"name": "AzureSynapseAnalyticsTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"stable": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "dbo",
+				"type": "Expression"
+			},
+			"table": "ntable"
+		}
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select *from information_schema.tables where table_type='Base table' and table_name='ntable'",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureDataLakeStorage",
+							"type": "LinkedServiceReference"
+						},
+						"path": "new/dm"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureSqlnew",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSynapseAnalyticsTable1",
+						"type": "DatasetReference",
+						"parameters": {
+							"stable": "ntable"
+						}
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
