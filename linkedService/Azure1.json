@@ -1,0 +1,17 @@
+{
+	"name": "Azure1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "newKeyvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "newsql"
+			}
+		}
+	}
+}
